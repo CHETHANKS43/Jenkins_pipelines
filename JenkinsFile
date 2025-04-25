@@ -10,7 +10,7 @@ pipeline{
         stage ('checkout'){
             steps{
                 echo "first build"
-                sleep 20
+                sleep 1
             }
         }
    }
