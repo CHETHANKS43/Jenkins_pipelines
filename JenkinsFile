@@ -1,0 +1,11 @@
+pipeline{
+    agents any
+    stages{
+        stage ('checkout'){
+            steps{
+                echo "first build"
+            }
+        }
+   }
+    
+}
