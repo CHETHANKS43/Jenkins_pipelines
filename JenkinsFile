@@ -4,14 +4,14 @@ pipeline {
         stage ('checkout'){
             steps{ 
                 echo "first build"
-                sleep 10
+                sleep 1
             }
         }
         stages{
         stage ('checkout'){
             steps{
                 echo "first build"
-                sleep 10
+                sleep 1
             }
         }
    }
