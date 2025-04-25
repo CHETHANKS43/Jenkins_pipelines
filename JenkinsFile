@@ -6,6 +6,12 @@ pipeline{
                 echo "first build"
             }
         }
+        stages{
+        stage ('checkout'){
+            steps{
+                echo "first build"
+            }
+        }
    }
     
 }
