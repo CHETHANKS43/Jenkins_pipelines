@@ -7,12 +7,10 @@ pipeline {
                 sleep 10
             }
         }
-    stages {
-        stage('build'){
+        stage ('build'){
             steps {
-                echo 'this is build stage'
+                echo 'checkout build'
             }
         }
-    }
     }
 }
