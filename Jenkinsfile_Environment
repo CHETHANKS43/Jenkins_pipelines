@@ -19,6 +19,11 @@ pipeline {
         }
         stage('checkout'){
             steps {
+                script{
+                    sh '''
+                echo "SHELL ----- app_type : $APP  Target_env: $ENV"
+                '''
+                }
                 sh '''
                 echo "SHELL ----- app_type : $APP  Target_env: $ENV"
                 '''
