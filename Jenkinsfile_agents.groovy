@@ -19,22 +19,30 @@ pipeline {
                 sleep 5
             }
         }
-        stage ('test1') {
-            agent {
-                label 'slave1'
-            }
-            steps {
-                echo 'this is the test1 stage'
-                sleep 5
-            }
-        }
-        stage ('test2') {
-            agent {
-                label 'slave1'
-            }
-            steps {
-                echo 'this is the test2 stage'
-                sleep 5
+
+        stage('parallel testing'){
+            pipline {
+                stage ('test1') {
+                    agent {
+                        label 'slave1'
+                    }
+                    steps {
+                        echo 'this is the test1 stage'
+                        sleep 5
+                    }
+                }
+                stage ('test2') {
+                    agent {
+                     label 'slave1'
+                    }
+                    steps {
+                        echo 'this is the test2 stage'
+                        sleep 5
+     
+                    }
+                }
+        
+        
             }
         }
     
