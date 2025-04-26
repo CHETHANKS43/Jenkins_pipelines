@@ -13,7 +13,7 @@ pipeline {
     stages{
         stage('checkout'){
             steps {
-                sh'''
+                sh '''
                 echo "SHELL ----- app_type : $APP  environment: $ENV"
                 '''
             }
@@ -23,7 +23,7 @@ pipeline {
                 echo 'GROOVY-----app_type : $APP  environment: $ENV'
                 sh '''
                 echo 'SHELL-----app_type : $APP  environment: $ENV'
-                '''
+                 '''
             }
         }
     }
