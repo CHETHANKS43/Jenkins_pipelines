@@ -11,6 +11,12 @@ pipeline {
 
 
     stages{
+
+        stage('check env'){
+            steps {
+                sh 'env'
+            }
+        }
         stage('checkout'){
             steps {
                 sh '''
