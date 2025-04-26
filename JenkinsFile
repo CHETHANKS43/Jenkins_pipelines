@@ -5,6 +5,7 @@
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/CHETHANKS43/Jenkins_pipelines.git'
+                echo 'this is the first build'
             }
         }
     
