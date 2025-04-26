@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script{
                     sh '''
-                echo "SHELL ----- app_type : $APP  Target_env: $ENV"
+                echo "SHELL script ----- app_type : $APP  Target_env: $ENV"
                 '''
                 }
                 sh '''
