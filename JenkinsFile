@@ -1,19 +1,18 @@
-pipeline {
+
+    pipeline {
     agent any
     stages {
-        stage ('checkout'){
-            steps{ 
-                echo 'first build'
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/CHETHANKS43/Jenkins_pipelines.git'
             }
         }
-        stages{
-        stage ('checkout'){
-            steps{
-                '''echo "first build"
-                sleep 10
-                '''
+    stages {
+        stage('build') {
+            steps {
+                echo 'this is the first build'
             }
         }
-   }
-    
+    }
+    }
 }
