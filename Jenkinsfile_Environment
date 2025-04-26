@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+
+    environment {
+        APP='fronted'
+        ENV='test'
+    }
+
+
+
+
+    stages{
+        stage('checkout'){
+            steps {
+                sh'''
+                echo "SHELL ----- app_type : $APP  environment: $ENV"
+                '''
+            }
+        }
+        stage ('build'){
+            steps {
+                echo 'GROOVY-----app_type : $APP  environment: $ENV'
+                sh '''
+                echo 'SHELL-----app_type : $APP  environment: $ENV'
+                '''
+            }
+        }
+    }
+}
