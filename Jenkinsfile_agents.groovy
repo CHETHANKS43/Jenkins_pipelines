@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 echo 'this is the first build'
-                sleep 20
+                sleep 4
             }
         }
         stage ('build') {
@@ -16,6 +16,24 @@ pipeline {
             }
             steps {
                 echo 'this is the build stage'
+                sleep 5
+            }
+        }
+        stage ('test1') {
+            agent {
+                label 'slave1'
+            }
+            steps {
+                echo 'this is the test1 stage'
+                sleep 5
+            }
+        }
+        stage ('test2') {
+            agent {
+                label 'slave1'
+            }
+            steps {
+                echo 'this is the test2 stage'
                 sleep 5
             }
         }
