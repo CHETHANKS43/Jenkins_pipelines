@@ -1,3 +1,5 @@
 !/usr/bin/env bash
 tstamp="$(date +'%d-%B-%y %H:%M:%S)"
 git pull && git add -all && git commit -m "$*${tstamp)" && git push && echo "PUSHED: $* $tstamp"
+
+export PATH="/path/to/your/directory:$PATH"
