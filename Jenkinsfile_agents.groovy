@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             agent {
-                label 'slave2'
+                lable 'slave2'
             }
             steps {
                 echo 'this is the first build'
