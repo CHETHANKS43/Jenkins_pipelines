@@ -5,6 +5,7 @@
         stage('Checkout') {
             steps {
                 echo 'this is the first build'
+                sleep 20
             }
         }
     
