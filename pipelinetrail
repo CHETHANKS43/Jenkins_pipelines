@@ -1,0 +1,17 @@
+pipeline {
+    agents any
+     stages{
+        stage('checkout'){
+            steps {
+                echo "this is the first one"
+                sh "pwd"
+            }
+        }
+        stage('build'){
+            steps {
+                sh 'ls -ltr'
+                sleep 5
+            }
+        }
+    }
+}
