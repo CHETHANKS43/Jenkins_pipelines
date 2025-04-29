@@ -29,6 +29,7 @@ pipeline {
                     steps {
                         echo 'this is the test1 stage'
                         sleep 5
+                        sh 'ls -ltr'
                     }
                 }
                 stage ('test2') {
@@ -37,7 +38,8 @@ pipeline {
                     }
                     steps {
                         echo 'this is the test2 stage'
-                        sleep 5
+                        sleep 10
+                        pwd
      
                     }
                 }
