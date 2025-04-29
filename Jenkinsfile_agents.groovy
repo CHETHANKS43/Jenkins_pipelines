@@ -39,7 +39,9 @@ pipeline {
                     steps {
                         echo 'this is the test2 stage'
                         sleep 10
+                        sh '''
                         pwd
+                        '''
      
                     }
                 }
