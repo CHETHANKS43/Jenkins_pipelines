@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Start EC2') {
             steps {
-                sh 'python ec2start.py'
+                sh 'python ec2startt.py'
             }
         }
     }
